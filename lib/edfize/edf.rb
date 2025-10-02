@@ -32,7 +32,7 @@ module Edfize
       number_of_bytes_in_header:      { size:  8, after_read: :to_i,  name: "Number of Bytes in Header" },
       reserved:                       { size: 44,                     name: "Reserved" },
       number_of_data_records:         { size:  8, after_read: :to_i,  name: "Number of Data Records" },
-      duration_of_a_data_record:      { size:  8, after_read: :to_i,  name: "Duration of a Data Record", units: "second" },
+      duration_of_a_data_record:      { size:  8, after_read: :to_f,  name: "Duration of a Data Record", units: "second" },
       number_of_signals:              { size:  4, after_read: :to_i,  name: "Number of Signals" }
     }
 
